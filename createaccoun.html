@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <style>
+    body{
+    	background-image:url('/home/rgukt123/Documents/documents/javascript/p/pics/Screenshot from 2023-04-04 19-23-06.png');
+    	background-repeat: no-repeat;
+    	background-size:cover;
+    }
+    .card{
+    height:90%;
+    width:80%;
+    margin:0;
+    }
+    </style>
+</head>
+
+<body>
+<br><br>
+<div class="card border-0 shadow">
+<div class="card-body">
+
+	<form action="/action_page.php">
+    <div class="container">
+        <h1>  <i class="fas fa-user"></i> Create Your Profile :-
+</h1><br><br><br>
+	 <legend><b><u><i class="fas fa-user-tie"></i> Personalia:</u></b></legend><br><br>
+        <form id="profileForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="profilePhoto" class="form-label"> <i class="fas fa-user-circle"></i> <b>Profile Photo</b></label>
+                <input type="file" class="form-control" id="profilePhoto" accept="image/*" required>
+                <img id="uploadedImage" src="#" alt="Uploaded Image" class="img-fluid mt-2 d-none">
+            </div>
+            <!-- First and Last Name -->
+            <fieldset>
+ 		
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label"><b>First Name</b></label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label"><b><Last Name</b></label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!--gender,work location,age,date of birth -->
+		 <label><b>Gender</b></label>
+    		  <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    male
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+  <label class="form-check-label" for="flexRadioDefault2">
+    female
+  </label>
+</div><br><br>
+	 <label><b><i class="fas fa-map-marker-alt"></i>Work Location</b></label>
+	  <input type="text" class="form-control" id="worklocation" placeholder="worklocation" ><br><br>
+	  
+	  <label><b><i class="fas fa-birthday-cake"></i> Date of Birth :</b></label>
+	  <input type="date" id="dateofbirth" >
+            </fieldset>
+            
+            
+            <br><br><br><br>
+            <legend><b><u><i class="fas fa-mail-bulk"></i> Contact Details:</u></b></legend>
+            <label><b><i class="fas fa-envelope-square"></i>Gmail</b></label>
+	  <input type="mail" class="form-control" id="gmail" placeholder="gmail" >
+	  
+	  <label><b><i class="fas fa-phone"></i> Phone Number</b></label>
+	  <input type="tel" class="form-control" id="phone" placeholder="phone" >
+	  <label><b><i class="fab fa-instagram"></i>Social Media Handle</b></label>
+	  <input type="tel" class="form-control" id="phone" placeholder="-----link----" >
+	  
+            <br><br><br><br>
+            <legend><b><u><i class="fas fa-briefcase"></i> Occupation Details:</u></b></legend>
+            <label><b><i class="fas fa-user"></i> <i class="fas fa-hard-hat"></i>
+Job Description:</b></label>
+	          <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    Vocation
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="#">Electrician</a></li>
+    <li><a class="dropdown-item" href="#">Plumber</a></li>
+    <li><a class="dropdown-item" href="#">Carpenter</a></li>
+  </ul>
+</div><br><br>
+
+	<label><b> <i class="fas fa-tools"></i> Skills and Experience :</b></label>
+	<!--Material textarea-->
+		<div class="md-form">
+		  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+		</div>
+	<label><b><i class="fas fa-book-open"></i> Education :</b></label>	
+		<div class="md-form">
+		  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+		</div>
+		
+		<label><b><i class="far fa-clock"></i> Availability:</b></label>
+		<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    timings
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="#">full-time</a></li>
+    <li><a class="dropdown-item" href="#">part-time</a></li>
+    <li><a class="dropdown-item" href="#">weekend</a></li>
+  </ul>
+</div>
+<br><br>
+	
+	<form action="/upload" method="post" enctype="multipart/form-data">
+  <label for="certifications"><i class="far fa-file"></i> Upload Certifications:</label>
+  <input type="file" id="certifications" name="certifications" accept=".pdf, .doc, .docx" multiple>
+  <input type="submit" value="Upload">
+</form><br><br>
+<label><b> <i class="fas fa-money-check-alt"></i> Rates and pricing:</b></label>	
+		<div class="md-form">
+		  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+		</div>
+		
+		<label><b>About me :</b></label>	
+		<div class="md-form">
+		  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+		</div>
+		
+		<label><b>Notes:</b></label>	
+		<div class="md-form">
+		  <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+		</div>
+
+            
+            
+            
+            <!-- ... other form elements as described -->
+            <br><br>
+            <button type="submit" class="btn btn-primary">Create Account</button>
+        </form>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        const profileForm = document.getElementById('profileForm');
+        const uploadedImage = document.getElementById('uploadedImage');
+
+        document.getElementById('profilePhoto').onchange = function(event) {
+            uploadedImage.classList.remove('d-none');
+            uploadedImage.src = URL.createObjectURL(event.target.files[0]);
+        };
+
+        profileForm.addEventListener('submit', function(event) {
+            if (!profileForm.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            profileForm.classList.add('was-validated');
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

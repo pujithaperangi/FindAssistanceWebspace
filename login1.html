@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	
+   
+  <style>
+	 
+    	
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+	background-image:url('login.jpeg');
+	background-repeat: no-repeat;
+    	background-size:cover;
+	
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .video-container {
+	margin-top: 160px;
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 70%;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body >
+  <div class="container">
+    <!-- Left Division with Video -->
+    <div class="left">
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="login.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Right Division with Form -->
+    <div class="right">
+      <div class="card">
+        <h2 class="text-center mb-4">Login</h2>
+        <form action="login.php" method="POST">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+          <div class="text-center mt-3">
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
